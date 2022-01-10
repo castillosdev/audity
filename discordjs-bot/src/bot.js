@@ -3,8 +3,8 @@ require('dotenv').config();
 const { Client, Intents, GuildMember, ReactionEmoji } = require('discord.js');
 const client = new Client( 
   {
-  partials: ['MESSAGE' , 'REACTON'],
-  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
+  partials: ['MESSAGE' , 'CHANNEL', 'REACTON'],
+  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MESSAGE_REACTIONS],
 });
 const PREFIX = '$';
 
@@ -66,7 +66,7 @@ client.on('messageReactionAdd', (reaction, user) => {
   console.log('Whats Gud');
   const { name } = reaction.emoji;
   const member = reaction.message.guild.members.cache.get(user.id);
-  if (reaction.message.id === '928504577475616819') {
+  if (reaction.message.id === '929645725493653514') {
     switch (name) {
       case '🎵':
         member.roles.add('928503338683748352');
@@ -81,6 +81,12 @@ client.on('messageReactionAdd', (reaction, user) => {
         member.roles.add('928503384561053847');
         break;
     }
+    
+  try{}
+  catch (err) {
+    console.log(err);
+    message.channel.send('An error occured. Either I do not have permission or the user was not found.')
+  }
   }
 });
 
