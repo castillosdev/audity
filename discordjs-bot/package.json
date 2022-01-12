@@ -12,11 +12,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/opus": "^0.7.0",
     "@distube/spotify": "^1.0.0",
     "discord.js": "^13.5.0",
     "distube": "^3.0.7",
     "dotenv": "^10.0.0",
     "libsodium-wrappers": "^0.7.9",
+    "python": "^0.0.4",
     "yt-search": "^2.10.3",
     "ytdl-core": "^4.9.2"
   }
