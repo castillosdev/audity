@@ -1,4 +1,4 @@
-# audity
+# audity without music
 
 This is my very 1st discord bot. 
 
